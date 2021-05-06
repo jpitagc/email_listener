@@ -369,7 +369,7 @@ class EmailListener:
         # Until idle times out
         while (get_time() < inner_timeout):
             # Check for a new response every 30 seconds
-            responses = self.server.idle_check(timeout=30)
+            responses = self.server.idle_check(timeout=5)
             print("Server sent:", responses if responses else "nothing")
             # If there is a response
             if (responses):

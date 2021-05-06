@@ -374,13 +374,13 @@ class EmailListener:
             # If there is a response
             if (responses):
                 # Suspend the idling
-                self.server.idle_done()
+                #self.server.idle_done()
                 # Process the new emails
                 msgs = self.scrape(move=move, unread=unread, delete=delete)
                 # Run the process function
                 process_func(self, msgs)
                 # Restart idling
-                self.server.idle()
+                #self.server.idle()
         # Stop idling
         self.server.idle_done()
         return
